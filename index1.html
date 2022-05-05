@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Tela de Cadastro</title>
+  </head>
+
+  <body style="font-family: Arial, Helvetica, sans-serif;">
+
+   <div class="position-relative max-w-100" style="background-color: #C83D2F; height: 12.5625rem"></div>
+
+   <main class="px-5 py-3 w-90 h-50 bg-light position-absolute top-0 mt-5 start-50 translate-middle-x" style="margin: 0 auto;">
+
+    <section id="1">
+        <h2 class="text-center fw-bold" style="color:#C83D2F; font-size: 24px">Cadastre-se Gratuitamente</h2>
+        <p class="text-center " style="color: #707070; margin-top: -10px;">
+          e tenha um plano vitalício com
+        </p>
+
+        <div class="d-flex justify-content-around align-items-center">
+
+          <div class="text-center">
+            <h4 class="fw-bold" style="color: #C83D2F;">1000</h4>
+            <p style="margin-top: -10px; font-size: 11px; color: #707070;">impressoes</p>
+          </div>
+
+          <div class="text-center">
+            <h4 class="fw-bold" style="color: #C83D2F;">1GB</h4>
+            <p style="margin-top: -10px; font-size: 11px; color: #707070;">de espaço</p>
+          </div>
+
+          <div class="text-center">
+            <h4 class="fw-bold" style="color: #C83D2F;">3</h4>
+            <p style="margin-top: -10px; font-size: 11px; color: #707070;">usuários</p>
+          </div>   
+        </div>
+    </section>
+
+
+    <section id="stepper-container">
+
+        <div class="container">
+          <div class="accordion" id="accordionExample">
+          <div class="steps">
+              <progress id="progress" value=0 max=100 ></progress>
+              <div class="step-item">
+                  <button class="step-button text-center" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      
+                  </button>
+                  <div class="step-title">
+                      First Step
+                  </div>
+              </div>
+              <div class="step-item">
+                  <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     
+                  </button>
+                  <div class="step-title">
+                      Second Step
+                  </div>
+              </div>
+              <div class="step-item">
+                  <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    
+                  </button>
+                  <div class="step-title">
+                      Third Step
+                  </div>
+              </div>
+          </div>
+
+          <div class="card">
+              <div  id="headingOne">
+              </div>
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="card-body">
+                    your content goes here...
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div  id="headingTwo">
+
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="card-body">
+                      your content goes here...
+                  </div>
+              </div>
+          </div>
+          <div class="card">
+              <div  id="headingThree">
+
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="card-body">
+                      your content goes here...
+                  </div>
+              </div>
+          </div>
+          </div>
+          </div>
+
+    </section>
+    
+   
+
+
+
+   </main>
+
+  </body>
+</html>

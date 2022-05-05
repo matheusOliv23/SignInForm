@@ -1,0 +1,23 @@
+{
+  "name": "signinform",
+  "version": "1.0.0",
+  "description": "Desafio técnico",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusOliv23/SignInForm.git"
+  },
+  "author": "Matheus Henrique Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusOliv23/SignInForm/issues"
+  },
+  "homepage": "https://github.com/matheusOliv23/SignInForm#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
+  }
+}

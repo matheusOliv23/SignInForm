@@ -1,0 +1,16 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+$theme-colors: (
+  "primary": #d60e96,
+  "primary-light": lighten(#d60e96, 10%),
+  "primary-dark": darken(#d60e96, 10%),
+  "secondary": #3d5d6f,
+  "secondary-light": lighten(#3d5d6f, 10%),
+  "secondary-dark": darken(#3d5d6f, 10%),
+  "light-gray": #fafafa,
+  "light-gray-dark": darken(#fafafa, 10%),
+  "eerie-black": #1b1b1b,
+  "black": $black,
+  "white": $white
+);
