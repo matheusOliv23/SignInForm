@@ -1,52 +1,63 @@
-.steps {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+/*OBSERVAÇÕES SOBRE NOMES DAS CLASSES*
+ 
+Classes com '--' mudam a aparencia do elemento 
+Exemplo: .bg--color-blue  mudará a cor do background
+
+
+*/
+:root{
+    --primary-color: #C83D2F;
+    --gray-color: #707070;
+    --background-light: #f3f3f3;
+}
+
+body{
+    background-color: var(--background-light);
+}
+
+.bg--primary-color{
+    background-color: var(--primary-color);
+}
+
+.text--primary-color{
+    color: var(--primary-color);
+}
+.text--gray-color{
+    color: var(--gray-color);
+}
+
+/* PROGRESS BAR */
+
+.progressbar{
+    margin-top: 2rem;   
     position: relative;
 }
-.step-button {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: none;
-    background-color: #707070;
-    transition: .4s;
-}
-.step-button[aria-expanded="true"] {
-    width: 15px;
-    height: 15px;
-    background-color: #C83D2F;
-    color: #fff;
-}
-.done {
-    background-color: #C83D2F;
-    color: #fff;
-}
-.step-item {
-    z-index: 10;
-    text-align: center;
-}
-#progress {
-  -webkit-appearance:none;
+.progressbar::before{
+    content: '';
     position: absolute;
-    width: 95%;
-    z-index: 5;
-    height: 10px;
-    margin-left: 18px;
-    margin-bottom: 18px;
-   
-}
-/* to customize progress bar */
-#progress::-webkit-progress-value {
-    background-color: #C83D2F;
-    transition: .5s ease;
+    top: 50%;
+    transform: translateY(-50%);
     height: 3px;
-   
+    width: 100%;
+    background-color: var(--gray-color);
 }
-#progress::-webkit-progress-bar {
-    background-color: #707070;
-    height: 3px;
-  
 
+.progress--step{
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--gray-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+}
+
+.progress--step::after{
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.625rem; 
+    width: 80px;
+    text-align: center;   
 }
