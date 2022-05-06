@@ -19,7 +19,7 @@
 
    <div class="position-relative max-w-100 bg--primary-color" style=" height: 12.5625rem"></div>
 
-   <main class="px-5 py-3 w-90 h-50 bg-light position-absolute top-0 mt-5 start-50 translate-middle-x" style="margin: 0 auto; background-color: #f9f9f9;box-shadow: 0px 3px 30px #00000029;">
+   <main class="px-5 py-3 w-90 h-auto bg-light position-absolute top-0 mt-5 start-50 translate-middle-x" style="margin: 0 auto; background-color: #f9f9f9;box-shadow: 0px 3px 30px #00000029;">
 
    <section id="1">
 
@@ -48,9 +48,8 @@
     </section>
 
     <div class="d-flex justify-content-between progressbar">
-        <div class="progress--step" data-title="Digite os seus dados"> 
-                
-        </div>
+        <div class="progress" id="progress"></div>
+        <div class="progress--step progress--step-active" data-title="Digite os seus dados"></div>
         <div class="progress--step " data-title="Selecione suas necessidades"></div>
         <div class="progress--step" data-title="Finalizar cadastro"></div>
     </div>
@@ -75,7 +74,7 @@
             <input type="text" name="username" id="username">
           </div>
           <div class="">
-            <a href="" class="btn btn-next">Avançar</a>
+            <a href="/tela2.html" class="btn btn-next">Avançar</a>
           </div>
         </div>
       </form>
@@ -89,6 +88,7 @@
 
 
    </main>
+   <script src="./js/main.js"></script>
     <script src="/build/constrast-bootstrap-pro/js/cdb.js"></script>
     <script>
         const stepper = document.querySelector('#stepper');

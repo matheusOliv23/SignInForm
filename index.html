@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Tela de Cadastro</title>
+  </head>
+
+  <body style="font-family: Arial, Helvetica, sans-serif;">
+
+   <div class="position-relative max-w-100 bg--primary-color" style=" height: 12.5625rem"></div>
+
+   <main class="px-5 py-3 w-90 bg-light position-absolute top-0 mt-5 start-50 translate-middle-x" style="margin: 0 auto; background-color: #f9f9f9;box-shadow: 0px 3px 30px #00000029; min-width: 340px;">
+
+   <section id="1">
+
+        <h2 class="text-center fw-bold text--primary-color" style="font-size: 24px">Cadastre-se Gratuitamente</h2>
+        <p class="text-center " style="color: #707070; margin-top: -10px;">
+          e tenha um plano vitalício com
+        </p>
+
+        <div class="d-flex justify-content-around align-items-center">
+
+          <div class="text-center">
+            <h4 class="fw-bold text--primary-color">1000</h4>
+            <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">impressoes</p>
+          </div>
+
+          <div class="text-center">
+            <h4 class="fw-bold text--primary-color" >1GB</h4>
+            <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">de espaço</p>
+          </div>
+
+          <div class="text-center">
+            <h4 class="fw-bold text--primary-color" >3</h4>
+            <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">usuários</p>
+          </div>   
+        </div>
+    </section>
+
+    <div class="d-flex justify-content-between progressbar">
+        <div class="progress" id="progress"></div>
+        <div class="progress--step progress--step-active" data-title="Digite os seus dados"></div>
+        <div class="progress--step " data-title="Selecione suas necessidades"></div>
+        <div class="progress--step" data-title="Finalizar cadastro"></div>
+    </div>
+   
+  
+   
+
+    <section class="mt-5">    
+      
+        <form >
+          <div class="mb-2 text--label-color">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" aria-describedby="nome">            
+          </div>
+          <div class="mb-2 text--label-color">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="email">           
+          </div>
+          <div class="mb-2 text--label-color">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <div class="mb-2 text--label-color">   
+            <label for="dominio" class="form-label">Dominio</label> 
+            <div class="input-group">
+                <input type="text" class="form-control" id="dominio" aria-describedby="dominio">  
+                <span class="input-group-text text--label-color" id="dominio">.selbetti.com.br</span>                    
+            </div>      
+          </div>
+          <div class="mb-2 text--label-color">
+            <label for="telefone" class="form-label">Telefone</label>
+            <div class="input-group d-flex justify-content-between">
+              <input type="tel" class="me-2  tel--input-ddd" id="telefone" aria-describedby="ddd-telefone">  
+              <input type="tel" class="me-2  tel--input-ddd" id="telefone" aria-describedby="prefixo-telefone">                          
+              <input type="tel" class="tel--input form-control" id="telefone" aria-describedby="numero-telefone">                 
+            </div>           
+          </div>
+
+          <div class="mt-5  d-flex align-items-center justify-content-between">
+            <div class="form-check d-flex align-items-center flex-md-row justify-content-center ">
+              <input class="form-check-input checkbox--form" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label text--label-color mx-1" style="font-size: 11px;" for="flexCheckDefault">
+                Concordo em receber novidades <br/>
+                 sobre a Selbetti via email
+              </label>
+            </div>
+            <a href="./tela2.html">
+              <button type="button" class="btn-lg btn--style">
+                Continuar              
+              </button>
+            </a> 
+          </div>
+          
+        </form>
+      
+         
+
+    </section>
+      
+   
+
+
+
+   </main>
+   <script src="./js/main.js"></script>
+    <script src="/build/constrast-bootstrap-pro/js/cdb.js"></script>
+    <script>
+        const stepper = document.querySelector('#stepper');
+        new CDB.Stepper(stepper);
+    </script>
+  </body>
+</html>
