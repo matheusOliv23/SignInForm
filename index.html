@@ -68,14 +68,17 @@
                 <div class="mb-2 text--label-color">
                     <label for="nome" class="form-label">Nome</label>
                     <input type="text" class="form-control" id="nome" aria-describedby="nome">
+                    <div class="text-danger" id="errorNome"></div>
                 </div>
                 <div class="mb-2 text--label-color">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="email" aria-describedby="email">
+                    <div class="text-danger" id="errorEmail"></div>
                 </div>
                 <div class="mb-2 text--label-color">
                     <label for="password" class="form-label">Senha</label>
                     <input type="password" class="form-control" id="password">
+                    <div class="text-danger" id="errorSenha"></div>
                 </div>
                 <div class="mb-2 text--label-color">
                     <label for="dominio" class="form-label">Dominio</label>
@@ -83,27 +86,25 @@
                         <input type="text" class="form-control" id="dominio" aria-describedby="dominio">
                         <span class="input-group-text text--label-color" id="dominio">.selbetti.com.br</span>
                     </div>
+                    <div class="text-danger divMensagem"></div>
                 </div>
                 <div class="mb-2 text--label-color">
                     <label for="telefone" class="form-label">Telefone</label>
-                    <div class="input-group d-flex justify-content-between">
-                        <input type="tel" class="me-2  tel--input-ddd" id="telefone" aria-describedby="ddd-telefone">
-                        <input type="tel" class="me-2  tel--input-ddd" id="telefone" aria-describedby="prefixo-telefone">
-                        <input type="tel" class="tel--input form-control" id="telefone" aria-describedby="numero-telefone">
-                    </div>
+                    <input type="tel" class="form-control" id="telefone">
+                    <div class="text-danger divMensagem"></div>
                 </div>
 
-                <div class="mt-5  d-flex align-items-center justify-content-between">
-                    <div class="form-check d-flex align-items-center flex-md-row justify-content-center ">
-                        <input class="form-check-input checkbox--form" type="checkbox" value="" id="flexCheckDefault">
+                <div class="mt-5  d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <div class="form-check d-flex align-items-center justify-content-center ">
+                        <input class="form-check-input checkbox--form" type="checkbox" value="newsletter" id="newsletter">
                         <label class="form-check-label text--label-color mx-1" style="font-size: 11px;" for="flexCheckDefault">
-                Concordo em receber novidades <br/>
-                 sobre a Selbetti via email
-              </label>
+                            Concordo em receber novidades sobre a Selbetti via email
+                        </label>
+                        <div class="text-danger divMensagem"></div>
                     </div>
-                    <button type="button" class="btn-lg btn--style btn-next">
-                Continuar              
-              </button>
+                    <button onclick="validarForm()" type="button" class="btn-lg btn--style btn-next">
+                        Continuar              
+                    </button>
                 </div>
 
             </form>
@@ -112,82 +113,76 @@
                 <p class="text-center" style="color: #9C9B99; font-size: 0.9rem;">Selecione uma ou mais necessidades para <br/> pré-configurarmos o sistema para você</p>
 
 
-                <div class="row mb-4 ">
 
-                    <div class="col d-flex flex-column align-items-center justify-content-center">
-                        <img src="./assets/img/Grupo 130.svg" alt="Icone de tres pessoas" class="icon__img">
+
+
+                <div class="d-flex align-content-center justify-content-center flex-wrap gap-3 gap-md-4">
+
+                    <div id="rh" class="selector col p-md-3 p-2 gap-2 d-flex flex-column align-items-center justify-content-between">
+                        <img src="./assets/img/Grupo 130.png" alt="Icone de tres pessoas" class="icon__img">
                         <span class="text--gray-color text-center" style="font-size: 12px">Recursos <br/> Humanos</span>
                     </div>
 
-                    <div class="col d-flex flex-column justify-content-around align-items-center">
-                        <img src="./assets/img/Grupo 132.svg" alt="Icone de um gráfico em colunas crescente" class="icon__img">
+                    <div id="finance" class="selector col p-md-3 gap-2 d-flex flex-column justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 132.png" alt="Icone de um gráfico em colunas crescente" class="icon__img">
                         <span class="text--gray-color text-center" style="font-size: 12px">Financeiro</span>
                     </div>
 
-                    <div class="col d-flex flex-column  justify-content-around align-items-center">
-                        <img src="./assets/img/Grupo 131.svg" alt="Icone de uma pessoa" class="icon__img">
+                    <div id="tele" class="selector col p-md-3 p-2 gap-2 d-flex flex-column  justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 131.png" alt="Icone de uma pessoa" class="icon__img">
                         <span class="text--gray-color text-center" style="font-size: 12px">Atendimento</span>
                     </div>
 
-                </div>
 
-                <div class="row mb-4 justify-content-center align-items-center">
-
-                    <div class="col d-flex flex-column  justify-content-around align-items-center">
-                        <img src="./assets/img/Grupo 135.svg" alt="Icone de um martelo do juiz" class="icon__img">
+                    <div id="juri" class="selector  col gap-2  p-md-3 d-flex flex-column  justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 135.png" alt="Icone de um martelo do juiz" class="icon__img">
                         <span class="text--gray-color text-center" style="font-size: 12px">Jurídico</span>
                     </div>
 
-                    <div class="col d-flex flex-column  justify-content-around align-items-center">
-                        <img src="./assets/img/Grupo 136.svg" alt="Icone de um caminhao" class="icon__img">
+                    <div id="logistic" class="selector col gap-2 p-2 p-md-3 d-flex flex-column  justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 136.png" alt="Icone de um caminhao" class="icon__img">
                         <span class="text--gray-color text-center" style="font-size: 12px">Logística</span>
                     </div>
 
-                    <div class="col d-flex flex-column  justify-content-around align-items-center">
-                        <img src="./assets/img/Grupo 133.svg" alt="Icone de um papel e um pincel" class="icon__img">
+                    <div id="education" class="selector col gap-2 p-2  p-md-3 d-flex flex-column  justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 133.png" alt="Icone de um papel e um pincel" class="icon__img">
                         <span class="text--gray-color text-center" style="font-size: 12px">Educação</span>
                     </div>
 
-                </div>
 
-                <div class="row">
-                    <div class="col d-flex flex-column justify-content-around align-items-center">
-                        <img src="./assets/img/Grupo 134.svg" alt="Icone de um curativo" class="icon__img">
+                    <div id="health" class="selector col gap-2 p-2 text-center d-flex flex-column justify-content-around text-center align-items-center ">
+                        <img src="./assets/img/Grupo 134.png" alt="Icone de um curativo" class="icon__img">
                         <span class="text--gray-color text-center" style="font-size: 12px">Saúde</span>
                     </div>
-                    <div class="col d-flex flex-column">
+
+                    <div id="others" class="selector  col gap-2 p-md-2 d-flex flex-column text-center align-items-center">
                         <div class="mb-2 text--label-color">
                             <input type="text" placeholder="Digite um segmento" class="text-center" style="border:none ; border-bottom: 1px solid #707070; font-size: 12px; color: #989898;" id="email" aria-describedby="email">
                         </div>
                         <span class="text--gray-color text-center" style="font-size: 12px">Outro</span>
                     </div>
-                    <div class="col"></div>
                 </div>
 
-                </div>
+
 
                 <div class="mt-5 row d-flex justify-content-around align-items-center">
 
                     <a href="#" class="col">
-                        <button type="button" class=" btn text--gray-color btn-prev" style="font-size: 14px; border: 1px solid #707070;width: 6.25rem; height: 3.3125rem;">
+                        <button type="button" class=" btn text--gray-color btn-prev w-100 mb-1" style="font-size: 14px; border: 1px solid #707070;width: 6.25rem; height: 3.3125rem;">
                       Voltar
                     </button>
                     </a>
 
 
 
-                    <a href="/tela2.html" class="col">
-                        <button type="button" class=" btn bg--primary-color" style="font-size: 14px;color:#ffff; width: 13.375rem; height: 3.3125rem;">
+                    <a href="/concluirCadastro.html" class="col">
+                        <button type="button" class=" btn bg--primary-color mb-1" style="font-size: 14px;color:#ffff; width: 13.375rem; height: 3.3125rem;">
                        Criar minha conta              
                       </button>
                     </a>
 
 
                 </div>
-            </form>
-
-            <form action="" class="form-step">
-                carregando
             </form>
 
 
