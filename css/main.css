@@ -5,101 +5,152 @@ Exemplo: .bg--color-blue  mudará a cor do background
 
 
 */
-:root{
+
+:root {
     --primary-color: #C83D2F;
     --gray-color: #707070;
     --background-light: #f3f3f3;
 }
 
-body{
+body {
     background-color: var(--background-light);
 }
 
-.bg--primary-color{
+.form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate .5s;
+    -webkit-animation: animate .5s;
+}
+
+.form-step-active {
+    display: block;
+}
+
+.bg--primary-color {
     background-color: var(--primary-color);
 }
 
-.text--primary-color{
+.text--primary-color {
     color: var(--primary-color);
 }
-.text--gray-color{
+
+.text--gray-color {
     color: var(--gray-color);
 }
 
-.text--label-color{
+.text--label-color {
     color: #9C9B99;
     font-size: 14px;
 }
 
+.section-container {
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    box-shadow: 0px 3px 30px #00000029;
+}
+
+@media screen and (min-width: 600px) {
+    .section-container {
+        min-width: 28.125rem;
+        max-width: 28.125rem
+    }
+}
+
+
 /* PROGRESS BAR */
 
-.progressbar{
-    margin-top: 2rem;   
+.progressbar {
+    margin-top: 2rem;
     position: relative;
 }
-.progressbar::before, .progress{
+
+.progressbar::before,
+.progress {
     content: '';
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     height: 3px;
     width: 100%;
     background-color: var(--gray-color);
+    z-index: -1;
 }
 
-.progress{
+.progress {
     background-color: var(--primary-color);
     width: 0%;
-  
+    transition: .4s;
 }
 
-.progress--step{
+.progress--step {
     width: 1rem;
     height: 1rem;
     background-color: var(--gray-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;      
+    align-items: center;
 }
 
-.progress--step::after{
+.progress--step::after {
     content: attr(data-title);
     position: absolute;
     top: calc(100% + 0.5rem);
-    font-size: 0.625rem; 
+    font-size: 0.625rem;
     width: 80px;
-    text-align: center;   
+    text-align: center;
 }
 
-.progress--step-active{
+.progress--step-active {
     background-color: var(--primary-color);
     color: var(--primary-color);
     font-weight: bold;
     z-index: 2;
 }
 
-.checkbox--form{
+@keyframes animate {
+    0% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(-1%);
+    }
+}
+
+@-webkit-keyframes animate {
+    0% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(-1%);
+    }
+}
+
+.checkbox--form {
     width: 1.5625rem;
     height: 1.5625rem;
     background-color: white;
 }
 
-
-.btn--style{
+.btn--style {
     height: 3.3125rem;
     width: 7.25rem;
     color: #fff;
     background-color: var(--gray-color);
-    font-size: 1rem;   
+    font-size: 1rem;
     outline: none;
     border: none;
 }
 
-.tel--input-ddd{
+.btn__white {}
+
+.tel--input-ddd {
     width: 3.875rem;
     height: 2.875rem;
-    border: 1px solid #ced4da;;
+    border: 1px solid #ced4da;
+    ;
     border-radius: 2px;
     outline: none;
     padding: 0.375rem 0.75rem;
@@ -108,9 +159,41 @@ body{
     line-height: 1.5;
 }
 
-.tel--input{
+.tel--input {
     width: 11.6875rem;
-    height: 2.875rem;   
+    height: 2.875rem;
     border-radius: 2px;
     outline: none;
+}
+
+.icon__img {
+    max-width: 3.1875rem;
+}
+
+.loader {
+    border: 13px solid #f3f3f3;
+    /* Light grey */
+    border-top: 13px solid var(--primary-color);
+    /* Blue */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+}
+
+.overlay {
+    z-index: 9999;
+}
+
+.display-content {
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

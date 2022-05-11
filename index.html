@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,113 +13,198 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>Tela de Cadastro</title>
-  </head>
+</head>
 
-  <body style="font-family: Arial, Helvetica, sans-serif;">
+<body style="font-family: Arial, Helvetica, sans-serif;">
 
-   <div class="position-relative max-w-100 bg--primary-color" style=" height: 12.5625rem"></div>
+    <div class="position-relative max-w-100 bg--primary-color" style=" height: 12.5625rem"></div>
 
-   <main class="px-5 py-3 w-90 bg-light position-absolute top-0 mt-5 start-50 translate-middle-x" style="margin: 0 auto; background-color: #f9f9f9;box-shadow: 0px 3px 30px #00000029; min-width: 340px;">
+    <main class="px-5 py-3 w-90 bg-light position-absolute top-0 mt-5 start-50 translate-middle-x section-container ">
 
-   <section id="1">
+        <section id="1">
 
-        <h2 class="text-center fw-bold text--primary-color" style="font-size: 24px">Cadastre-se Gratuitamente</h2>
-        <p class="text-center " style="color: #707070; margin-top: -10px;">
-          e tenha um plano vitalício com
-        </p>
+            <h2 class="text-center fw-bold text--primary-color" style="font-size: 24px">Cadastre-se Gratuitamente</h2>
+            <p class="text-center " style="color: #707070; margin-top: -10px;">
+                e tenha um plano vitalício com
+            </p>
 
-        <div class="d-flex justify-content-around align-items-center">
+            <div class="d-flex justify-content-around align-items-center">
 
-          <div class="text-center">
-            <h4 class="fw-bold text--primary-color">1000</h4>
-            <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">impressoes</p>
-          </div>
+                <div class="text-center">
+                    <h4 class="fw-bold text--primary-color">1000</h4>
+                    <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">impressoes</p>
+                </div>
 
-          <div class="text-center">
-            <h4 class="fw-bold text--primary-color" >1GB</h4>
-            <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">de espaço</p>
-          </div>
+                <div class="text-center">
+                    <h4 class="fw-bold text--primary-color">1GB</h4>
+                    <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">de espaço</p>
+                </div>
 
-          <div class="text-center">
-            <h4 class="fw-bold text--primary-color" >3</h4>
-            <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">usuários</p>
-          </div>   
+                <div class="text-center">
+                    <h4 class="fw-bold text--primary-color">3</h4>
+                    <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">usuários</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="d-flex justify-content-between progressbar">
+
+            <div class="progress" id="progress"></div>
+
+            <div class="progress--step progress--step-active" data-title="Digite os seus dados"></div>
+            <div class="progress--step " data-title="Selecione suas necessidades"></div>
+            <div class="progress--step" data-title="Finalizar cadastro"></div>
         </div>
-    </section>
 
-    <div class="d-flex justify-content-between progressbar">
-        <div class="progress" id="progress"></div>
-        <div class="progress--step progress--step-active" data-title="Digite os seus dados"></div>
-        <div class="progress--step " data-title="Selecione suas necessidades"></div>
-        <div class="progress--step" data-title="Finalizar cadastro"></div>
-    </div>
-   
-  
-   
 
-    <section class="mt-5">    
-      
-        <form >
-          <div class="mb-2 text--label-color">
-            <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="nome" aria-describedby="nome">            
-          </div>
-          <div class="mb-2 text--label-color">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="email">           
-          </div>
-          <div class="mb-2 text--label-color">
-            <label for="password" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="password">
-          </div>
-          <div class="mb-2 text--label-color">   
-            <label for="dominio" class="form-label">Dominio</label> 
-            <div class="input-group">
-                <input type="text" class="form-control" id="dominio" aria-describedby="dominio">  
-                <span class="input-group-text text--label-color" id="dominio">.selbetti.com.br</span>                    
-            </div>      
-          </div>
-          <div class="mb-2 text--label-color">
-            <label for="telefone" class="form-label">Telefone</label>
-            <div class="input-group d-flex justify-content-between">
-              <input type="tel" class="me-2  tel--input-ddd" id="telefone" aria-describedby="ddd-telefone">  
-              <input type="tel" class="me-2  tel--input-ddd" id="telefone" aria-describedby="prefixo-telefone">                          
-              <input type="tel" class="tel--input form-control" id="telefone" aria-describedby="numero-telefone">                 
-            </div>           
-          </div>
 
-          <div class="mt-5  d-flex align-items-center justify-content-between">
-            <div class="form-check d-flex align-items-center flex-md-row justify-content-center ">
-              <input class="form-check-input checkbox--form" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label text--label-color mx-1" style="font-size: 11px;" for="flexCheckDefault">
+
+        <section class="mt-5">
+
+            <form class="form-step form-step-active" data-aos="zoom-in">
+                <div class="mb-2 text--label-color">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" aria-describedby="nome">
+                </div>
+                <div class="mb-2 text--label-color">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="email">
+                </div>
+                <div class="mb-2 text--label-color">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <div class="mb-2 text--label-color">
+                    <label for="dominio" class="form-label">Dominio</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="dominio" aria-describedby="dominio">
+                        <span class="input-group-text text--label-color" id="dominio">.selbetti.com.br</span>
+                    </div>
+                </div>
+                <div class="mb-2 text--label-color">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <div class="input-group d-flex justify-content-between">
+                        <input type="tel" class="me-2  tel--input-ddd" id="telefone" aria-describedby="ddd-telefone">
+                        <input type="tel" class="me-2  tel--input-ddd" id="telefone" aria-describedby="prefixo-telefone">
+                        <input type="tel" class="tel--input form-control" id="telefone" aria-describedby="numero-telefone">
+                    </div>
+                </div>
+
+                <div class="mt-5  d-flex align-items-center justify-content-between">
+                    <div class="form-check d-flex align-items-center flex-md-row justify-content-center ">
+                        <input class="form-check-input checkbox--form" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label text--label-color mx-1" style="font-size: 11px;" for="flexCheckDefault">
                 Concordo em receber novidades <br/>
                  sobre a Selbetti via email
               </label>
-            </div>
-            <a href="./tela2.html">
-              <button type="button" class="btn-lg btn--style">
+                    </div>
+                    <button type="button" class="btn-lg btn--style btn-next">
                 Continuar              
               </button>
-            </a> 
-          </div>
-          
-        </form>
-      
-         
+                </div>
 
-    </section>
-      
-   
+            </form>
+
+            <form action="" class="form-step" data-aos="fade-right">
+                <p class="text-center" style="color: #9C9B99; font-size: 0.9rem;">Selecione uma ou mais necessidades para <br/> pré-configurarmos o sistema para você</p>
 
 
+                <div class="row mb-4 ">
 
-   </main>
-   <script src="./js/main.js"></script>
+                    <div class="col d-flex flex-column align-items-center justify-content-center">
+                        <img src="./assets/img/Grupo 130.svg" alt="Icone de tres pessoas" class="icon__img">
+                        <span class="text--gray-color text-center" style="font-size: 12px">Recursos <br/> Humanos</span>
+                    </div>
+
+                    <div class="col d-flex flex-column justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 132.svg" alt="Icone de um gráfico em colunas crescente" class="icon__img">
+                        <span class="text--gray-color text-center" style="font-size: 12px">Financeiro</span>
+                    </div>
+
+                    <div class="col d-flex flex-column  justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 131.svg" alt="Icone de uma pessoa" class="icon__img">
+                        <span class="text--gray-color text-center" style="font-size: 12px">Atendimento</span>
+                    </div>
+
+                </div>
+
+                <div class="row mb-4 justify-content-center align-items-center">
+
+                    <div class="col d-flex flex-column  justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 135.svg" alt="Icone de um martelo do juiz" class="icon__img">
+                        <span class="text--gray-color text-center" style="font-size: 12px">Jurídico</span>
+                    </div>
+
+                    <div class="col d-flex flex-column  justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 136.svg" alt="Icone de um caminhao" class="icon__img">
+                        <span class="text--gray-color text-center" style="font-size: 12px">Logística</span>
+                    </div>
+
+                    <div class="col d-flex flex-column  justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 133.svg" alt="Icone de um papel e um pincel" class="icon__img">
+                        <span class="text--gray-color text-center" style="font-size: 12px">Educação</span>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col d-flex flex-column justify-content-around align-items-center">
+                        <img src="./assets/img/Grupo 134.svg" alt="Icone de um curativo" class="icon__img">
+                        <span class="text--gray-color text-center" style="font-size: 12px">Saúde</span>
+                    </div>
+                    <div class="col d-flex flex-column">
+                        <div class="mb-2 text--label-color">
+                            <input type="text" placeholder="Digite um segmento" class="text-center" style="border:none ; border-bottom: 1px solid #707070; font-size: 12px; color: #989898;" id="email" aria-describedby="email">
+                        </div>
+                        <span class="text--gray-color text-center" style="font-size: 12px">Outro</span>
+                    </div>
+                    <div class="col"></div>
+                </div>
+
+                </div>
+
+                <div class="mt-5 row d-flex justify-content-around align-items-center">
+
+                    <a href="#" class="col">
+                        <button type="button" class=" btn text--gray-color btn-prev" style="font-size: 14px; border: 1px solid #707070;width: 6.25rem; height: 3.3125rem;">
+                      Voltar
+                    </button>
+                    </a>
+
+
+
+                    <a href="/tela2.html" class="col">
+                        <button type="button" class=" btn bg--primary-color" style="font-size: 14px;color:#ffff; width: 13.375rem; height: 3.3125rem;">
+                       Criar minha conta              
+                      </button>
+                    </a>
+
+
+                </div>
+            </form>
+
+            <form action="" class="form-step">
+                carregando
+            </form>
+
+
+
+        </section>
+
+
+
+
+
+    </main>
+    <script src="./js/main.js"></script>
     <script src="/build/constrast-bootstrap-pro/js/cdb.js"></script>
     <script>
-        const stepper = document.querySelector('#stepper');
-        new CDB.Stepper(stepper);
+        AOS.init();
     </script>
-  </body>
+</body>
+
 </html>

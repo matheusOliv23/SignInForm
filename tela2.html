@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,87 +13,93 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Tela de Cadastro</title>
-  </head>
+</head>
 
-  <body style="font-family: Arial, Helvetica, sans-serif;">
+<body style="font-family: Arial, Helvetica, sans-serif;">
 
-   <div class="position-relative max-w-100 bg--primary-color" style=" height: 12.5625rem"></div>
+    <div class="position-relative max-w-100 bg--primary-color" style=" height: 12.5625rem"></div>
 
-   <main class="px-5 py-3 w-90 h-auto bg-light position-absolute top-0 mt-5 start-50 translate-middle-x" style="margin: 0 auto; background-color: #f9f9f9;box-shadow: 0px 3px 30px #00000029;">
+    <main class="px-5 py-3 w-90 bg-light position-absolute top-0 mt-5 start-50 translate-middle-x text-center section-container">
 
-   <section id="1">
 
-        <h2 class="text-center fw-bold text--primary-color" style="font-size: 24px">Cadastre-se Gratuitamente</h2>
-        <p class="text-center " style="color: #707070; margin-top: -10px;">
-          e tenha um plano vitalício com
-        </p>
 
-        <div class="d-flex justify-content-around align-items-center">
+        <section id="1">
 
-          <div class="text-center">
-            <h4 class="fw-bold text--primary-color">1000</h4>
-            <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">impressoes</p>
-          </div>
+            <h2 class="text-center fw-bold text--primary-color" style="font-size: 24px">Nome do Cadastrado</h2>
 
-          <div class="text-center">
-            <h4 class="fw-bold text--primary-color" >1GB</h4>
-            <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">de espaço</p>
-          </div>
 
-          <div class="text-center">
-            <h4 class="fw-bold text--primary-color" >3</h4>
-            <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">usuários</p>
-          </div>   
+            <div class="d-flex justify-content-around align-items-center text--gray-color">
+                <p>Bem vindo a revolução em gerenciamento de documentos e impressões em nuvem</p>
+
+            </div>
+        </section>
+
+
+
+
+        <div class="overlay">
+
+            <div class="d-flex justify-content-between progressbar" style="margin-bottom: 13rem;">
+
+                <div class="progress" id="progress"></div>
+
+                <div class="progress--step progress--step-active" data-title="Digite os seus dados"></div>
+                <div class="progress--step progress--step-active " data-title="Selecione suas necessidades"></div>
+                <div class="progress--step progress--step-active" data-title="Finalizar cadastro"></div>
+            </div>
+
+            <section class="mt-5 text-center d-flex flex-column justify-content-center align-items-center " style="margin-bottom: 10rem ;">
+                <div class="loader mb-3"></div>
+                <h2 class="text-center fw-bold text--primary-color" style="font-size: 24px">Aguarde enquanto preparamos o seu portal</h2>
+            </section>
         </div>
-    </section>
 
-    <div class="d-flex justify-content-between progressbar">
-        <div class="progress" id="progress"></div>
-        <div class="progress--step progress--step-active" data-title="Digite os seus dados"></div>
-        <div class="progress--step " data-title="Selecione suas necessidades"></div>
-        <div class="progress--step" data-title="Finalizar cadastro"></div>
-    </div>
-   
-  
-   
+        <section class="display-content">
+            <div style="margin-bottom: 8rem; margin-top: 6rem;">
+                <img src="./assets/img/Grupo 137.svg" alt="Icone de uma pipa">
+                <h2 class="text-center fw-bold text--primary-color" style="font-size: 24px">Adeus papel!</h2>
+                <h2 class="text-center fw-bold text--primary-color" style="font-size: 24px">Seu portal está pronto</h2>
 
-    <section class="mt-5">    
-      
-      <form action="" class="form">
-        <div class="form-step form-step-active">
-          <div class="input-group">
-            <label for="username">username</label>
-            <input type="text" name="username" id="username">
-          </div>
-          <div class="input-group">
-            <label for="username">username</label>
-            <input type="text" name="username" id="username">
-          </div>
-           <div class="input-group">
-            <label for="username">username</label>
-            <input type="text" name="username" id="username">
-          </div>
-          <div class="">
-            <a href="/tela2.html" class="btn btn-next">Avançar</a>
-          </div>
-        </div>
-      </form>
-      
-         
+            </div>
 
-    </section>
-      
-   
+
+            <div>
+                <p class="text--gray-color">Seu plano gratuito garante acesso vitalício a</p>
+                <div class="d-flex justify-content-around align-items-center">
+                    <div class="text-center">
+                        <h4 class="fw-bold text--primary-color">1000</h4>
+                        <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">impressoes</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h4 class="fw-bold text--primary-color">1GB</h4>
+                        <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">de espaço</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h4 class="fw-bold text--primary-color">3</h4>
+                        <p class="text-gray-color" style="margin-top: -10px; font-size: 11px;">usuários</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/index.html">
+                <button type="button" style="font-size: 14px;color:#ffff;height: 3.3125rem;" class="w-100 btn bg--primary-color">Ir para o meu portal</button>
+            </a>
+
+        </section>
 
 
 
-   </main>
-   <script src="./js/main.js"></script>
+    </main>
+    <script src="./js/main.js"></script>
     <script src="/build/constrast-bootstrap-pro/js/cdb.js"></script>
     <script>
-        const stepper = document.querySelector('#stepper');
-        new CDB.Stepper(stepper);
+        AOS.init();
     </script>
-  </body>
+</body>
+
 </html>
